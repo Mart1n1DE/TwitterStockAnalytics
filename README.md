@@ -13,14 +13,14 @@ For the process in building this project please visit https://martinhleung.com/p
 
 ## Installation and Usage
 
-For this project, I used a virtual box with Ubuntu 22.04 installed. 
-I used Python 3.10.4 along with the libraries found in this repo's requirements.txt.
-I installed 
-Spark 3.3.0 
-Kafka 3.2.0
-Hadoop 3.3.3
-Hive 2.3.9
-Scala 2.12
+For this project, I used a virtual box with Ubuntu 22.04 installed. <br>
+I used Python 3.10.4 along with the libraries found in this repo's requirements.txt. <br>
+I installed: <br>
+Spark 3.3.0  <br>
+Kafka 3.2.0 <br>
+Hadoop 3.3.3 <br>
+Hive 2.3.9 <br>
+Scala 2.12 <br>
 
 For the rest of installation and usage please visit https://martinhleung.com/portfolios#twitterproject.
 
