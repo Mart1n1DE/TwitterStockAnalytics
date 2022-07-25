@@ -1,1 +1,63 @@
-<mxfile host="app.diagrams.net" modified="2022-06-24T00:08:17.817Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" version="20.0.2" etag="L5t8WataZRe2SkPIiUJI" type="github"><diagram id="StTWU3r9pT4sTSh7zCWb">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-07-25T20:44:38.315Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="AlZ-Nu5lJJhhlH7E59yM" version="20.0.3" type="github">
+  <diagram id="StTWU3r9pT4sTSh7zCWb" name="Page-1">
+    <mxGraphModel dx="1185" dy="662" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="B0w3aLVskWE_tbaK04KM-21" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="550" y="186.19" width="490" height="207.63" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="1" source="B0w3aLVskWE_tbaK04KM-18" target="B0w3aLVskWE_tbaK04KM-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-18" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="335" y="235" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="1" source="B0w3aLVskWE_tbaK04KM-11" target="B0w3aLVskWE_tbaK04KM-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-11" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="210" width="245" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="B0w3aLVskWE_tbaK04KM-1" target="B0w3aLVskWE_tbaK04KM-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png;" vertex="1" parent="1">
+          <mxGeometry x="80.63" y="275" width="78.74" height="78.74" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-2" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.azul.com/wp-content/uploads/2017/03/kafka.jpg;" vertex="1" parent="1">
+          <mxGeometry x="195" y="260" width="108.74" height="108.74" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-4" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://ahana.io/wp-content/uploads/2020/09/spark_streaming_logo.png;" vertex="1" parent="1">
+          <mxGeometry x="345.96999999999997" y="239" width="168.05" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="B0w3aLVskWE_tbaK04KM-6" target="B0w3aLVskWE_tbaK04KM-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="765" y="323.7350000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-6" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://intellipaat.com/mediaFiles/2015/07/hadoop-hdfs.png;" vertex="1" parent="1">
+          <mxGeometry x="575" y="239.00000000000003" width="230" height="108.53" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-10" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Apache_Hive_logo.svg/1200px-Apache_Hive_logo.svg.png;" vertex="1" parent="1">
+          <mxGeometry x="845" y="221.9" width="158.6" height="142.74" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-12" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Data Ingestion&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="170" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-13" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Streaming Source&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="213.11" width="120" height="57.63" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-14" value="Messaging System" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="210" y="230" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-20" value="&lt;b&gt;Streaming Layer&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="335" y="190" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="B0w3aLVskWE_tbaK04KM-22" value="&lt;b&gt;Serving Layer&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="715" y="146.19" width="160" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
