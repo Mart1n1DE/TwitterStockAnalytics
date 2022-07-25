@@ -11,7 +11,7 @@ Used PySpark to transform and apply pre-trained machine learning model to Twitte
 Aggregated and visualized tweets and sentiment analysis results from Hive table.  <br>
 For the process in building this project please visit https://martinhleung.com/portfolios#twitterproject.
 
-##Installation and Usage
+## Installation and Usage
 
 For this project, I used a virtual box with Ubuntu 22.04 installed. 
 I used Python 3.10.4 along with the libraries found in this repo's requirements.txt.
