@@ -1,41 +1,45 @@
+import pyspark
 from pyspark import SparkContext                                                                                        
 from pyspark.sql import SparkSession                                                                                    
-from pyspark.streaming import StreamingContext                                                                          
-from pyspark.streaming.kafka import KafkaUtils        
+from pyspark.streaming import StreamingContext                                                                           
 from textblob import TextBlob                                                                  
 
-def handle_rdd(rdd):                                                                                                    
-    if not rdd.isEmpty():                                                                                               
-        global ss                                                                                                       
-        df = ss.createDataFrame(rdd, schema=['text', 'sentiment', 'company'])                                                
-        df.show()                                                                                                       
-        df.write.saveAsTable(name='default.tweets', format='hive', mode='append')                                       
+def handle_Dataframe(df,batchid):     
+	df = df.toDF("text") \
+		.rdd
+	if not df.isEmpty():
+		for ticker in TICKER_SYMBOLS: 
+			transform = df.filter(lambda text: ticker in text[0])
+			if not transform.isEmpty():
+				transform = transform.map(lambda text: (text[0],TextBlob(text[0]).sentiment.polarity,ticker))          
+				write_dataframe = ss.createDataFrame(transform, schema = ['text','sentiment','company'])
+				write_dataframe.show()
+				write_dataframe.write.saveAsTable(name='default.tweets', format = 'hive', mode = 'append')
                         
-
-TICKER_SYMBOLS = ['TSLA','MSFT','GOOG','AMZN','META','NVDA','NFLX','PYPL']                                                                                           
-sc = SparkContext(appName="TwitterStreamer")                                                                                     
-ssc = StreamingContext(sc, 5)                                                                                           
-                                                                                                                        
-ss = SparkSession.builder \                                                                                             
-        .appName("TwitterStreamer") \                                                                                            
-        .config("spark.sql.warehouse.dir", "/user/hive/warehouse") \                                                    
-        .config("hive.metastore.uris", "thrift://localhost:9083") \                                                     
-        .enableHiveSupport() \                                                                                          
-        .getOrCreate()                                                                                                  
-                                                                                                                        
+TICKER_SYMBOLS = ['GOOGL']#,'MSFT','TSLA','AMZN','META','NVDA','NFLX','PYPL']                                                                                           
+KAFKA_TOPIC = 'tweets'
+KAFKA_SERVER = 'localhost:9092'
+                                                                             
+ss = SparkSession \
+	.builder \
+	.appName("TwitterStreamer") \
+	.config("spark.sql.warehouse.dir", "/user/hive/warehouse") \
+	.config("hive.metastore.uris", "thrift://localhost:9083") \
+	.enableHiveSupport() \
+	.getOrCreate()        
+                                                                                                                 
 ss.sparkContext.setLogLevel('WARN')                                                                                     
-                                                                                                                        
-ks = KafkaUtils.createDirectStream(ssc, ['tweets'], {'metadata.broker.list': 'localhost:9092'})                       
-                                                                                                                        
-lines = ks.map(lambda x: x[1])                                                                                          
+                                                                                                                                                  
+kafka_connection = ss \
+	.readStream \
+	.format("kafka") \
+	.option("kafka.bootstrap.servers",KAFKA_SERVER) \
+	.option("subscribe",KAFKA_TOPIC) \
+	.load() \
 
-for ticker in TICKER_SYMBOLS:
-    transform = lines.filter(lambda tweet: ticker in tweet)
-    transform = transform.map(lambda tweet: (tweet[0],TextBlob(tweet[0]).sentiment.polarity,ticker))
-    transform.foreachRDD(handle_rdd)
-
-                                                                                                                                                        
-transform.foreachRDD(handle_rdd)                                                                                        
-                                                                                                                        
-ssc.start()                                                                                                             
-ssc.awaitTermination()
+kafka_dataframe = kafka_connection.selectExpr("CAST(value as STRING)") \
+	.writeStream \
+	.foreachBatch(handle_Dataframe) \
+	.outputMode("append") \
+	.start().awaitTermination()
+                                                                                                                                                                                                          
